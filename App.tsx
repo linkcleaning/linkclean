@@ -1,16 +1,14 @@
-
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import AboutCompany from './components/AboutCompany';
-import QuoteAI from './components/QuoteAI';
-import SpaceVisualizer from './components/SpaceVisualizer';
-import VideoVisualizer from './components/VideoVisualizer';
-import VoiceConsultant from './components/VoiceConsultant';
-import Testimonials from './components/Testimonials';
-import Footer from './components/Footer';
+import Header from './components/Header.tsx'; // 끝에 .tsx 를 붙여주세요
+import Hero from './components/Hero.tsx';
+import AboutCompany from './components/AboutCompany.tsx';
+import QuoteAI from './components/QuoteAI.tsx';
+import SpaceVisualizer from './components/SpaceVisualizer.tsx';
+import VideoVisualizer from './components/VideoVisualizer.tsx';
+import VoiceConsultant from './components/VoiceConsultant.tsx';
+import Testimonials from './components/Testimonials.tsx';
+import Footer from './components/Footer.tsx';
 import { Phone } from 'lucide-react';
-
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
