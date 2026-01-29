@@ -1,8 +1,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Mic, MicOff, Volume2, Bot, Loader2, Sparkles, MessageSquare } from 'lucide-react';
-import { GoogleGenAI, Modality, LiveServerMessage, Blob } from '@google/genai';
-
+import { GoogleGenerativeAI } from "@google/generative-ai"; // 이렇게 바꿔주세요.
 const GUIDES = ["입주 청소 견적 문의", "에어컨 살균 세척 주기", "사무실 정기 관리 상담"];
 
 // Base64 Helpers
