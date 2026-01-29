@@ -17,8 +17,8 @@ function App() {
       <main>
         <AboutCompany />
         {/* 아래 기능들은 에러 해결 후 나중에 추가할 수 있습니다. */}
-        {/* <SpaceVisualizer /> */}
-        {/* <VideoVisualizer /> */}
+        <SpaceVisualizer />
+        <VideoVisualizer />
         <Services />
         <Testimonials />
       </main>
