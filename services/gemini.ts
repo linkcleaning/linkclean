@@ -5,18 +5,18 @@ const API_KEY = "AIzaSyAI0BPPwdvDuyXmyTqDpqNE3qp6bEcp2tM";
 const genAI = new GoogleGenerativeAI(API_KEY);
 export const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-// 1. 시각화 AI용 함수
+// 1. AI 비주얼라이저용 함수
 export const generateCleanImage = async (prompt: string, aspectRatio?: string) => {
   try {
     const result = await model.generateContent(`${prompt} (가로세로비: ${aspectRatio || '1:1'})`);
     return result.response.text();
   } catch (error) {
-    console.error("시각화 에러:", error);
+    console.error("비주얼라이저 에러:", error);
     return null;
   }
 };
 
-// 2. 시네마틱/비디오 AI용 함수 (이름이 정확해야 합니다)
+// 2. AI 시네마용 함수
 export const generateCleaningVideo = async (prompt: string) => {
   try {
     const result = await model.generateContent(prompt);
