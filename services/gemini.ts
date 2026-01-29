@@ -1,10 +1,18 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// 환경변수나 직접 입력이 필요하지만, 우선 빌드 통과를 위해 구조만 만듭니다.
-const genAI = new GoogleGenerativeAI("YOUR_API_KEY_HERE");
+// API 키가 들어갈 자리입니다. 나중에 키를 받으면 따옴표 안에 넣으세요.
+const API_KEY = "YOUR_API_KEY_HERE"; 
+const genAI = new GoogleGenerativeAI(API_KEY);
+
 export const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-export const generateCleanImage = async (imageFile: string) => {
-  // 시각화 로직이 들어가는 부분
-  return imageFile; 
+// 시각화 기능을 위한 함수 이름을 다시 정의합니다.
+export const generateCleanImage = async (prompt: string) => {
+  try {
+    const result = await model.generateContent(prompt);
+    return result.response.text();
+  } catch (error) {
+    console.error("AI 에러:", error);
+    return null;
+  }
 };
