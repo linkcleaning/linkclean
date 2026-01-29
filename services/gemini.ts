@@ -16,7 +16,7 @@ export const generateCleanImage = async (prompt: string) => {
   }
 };
 
-// 시네마 AI용 함수 (추가됨)
+// 시네마 AI용 함수 (반드시 필요함)
 export const generateCleaningVideo = async (prompt: string) => {
   try {
     const result = await model.generateContent(prompt);
