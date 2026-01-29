@@ -14,7 +14,7 @@ export const generateCleanImage = async (prompt: string, aspectRatio?: string) =
   }
 };
 
-// 시네마틱 AI용 함수
+// 시네마틱 AI용 함수 (VideoVisualizer에서 찾던 함수입니다)
 export const generateCleaningVideo = async (prompt: string) => {
   try {
     const result = await model.generateContent(prompt);
